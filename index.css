@@ -1,0 +1,35 @@
+/* .head {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+.lis{
+    list-style: none;
+    display: flex;
+    margin: 10px;
+}
+.lis> li{
+    margin: 10px;
+}
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.resCard{
+    width: 200px;
+    margin: 10px;
+    padding: 2px;
+    border: 2px solid black;
+    background-color: darkkhaki;
+}
+.resCard :hover{
+    border: 4px solid black;
+} 
+
+.resImage{
+    height: 110px;
+    width: 100%;
+} */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
