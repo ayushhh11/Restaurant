@@ -2,8 +2,7 @@ import React, { Suspense, lazy, useContext, useEffect, useState } from 'react'
 import { Social } from './Components/Social'
 import Error from './Components/Error'
 import ReactDOM from 'react-dom/client'
-
-import BodyComp  from './Components/BodyComp'
+import { MainPageComponent } from './Components/MainPageComponent'
 // import About from './Components/About'
 import Contact from './Components/Contact'
 import Restaurants from './Components/Restaurants'
@@ -47,7 +46,7 @@ const App = ()=>{
             children: [
                 {
                     path: '/',
-                    element: <BodyComp />,
+                    element: <MainPageComponent />,
                 },
                 {
                     path: '/about',
