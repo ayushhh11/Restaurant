@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom/client'
 import { MainPageComponent } from './Components/MainPageComponent'
 // import About from './Components/About'
 import Contact from './Components/Contact'
+import Cart from './Components/Cart'
 import Restaurants from './Components/Restaurants'
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import userContext  from './Components/utils/UserContext'
@@ -23,7 +24,7 @@ const Socialupdate = Social(Contact)
 const App = ()=>{
     const [naam, setNaam] = useState()
     // Hooks can only be called inside the component
-    useEffect(()=>setNaam('Tomar saab')
+    useEffect(()=>setNaam('Gray Matter')
     ,[])
     
     return (
@@ -63,6 +64,10 @@ const App = ()=>{
                 {
                     path: '/media',
                     element: <Socialupdate />,
+                },
+                {
+                    path: '/cart',
+                    element: <Cart />,
                 }
             ],
             errorElement: <Error/>,

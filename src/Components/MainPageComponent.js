@@ -13,7 +13,7 @@ export const MainPageComponent = ()=>{
     function showTopRated(){
             setFilteredRestaurants(restaurants.filter(restaurant => restaurant.info.avgRating >4))
     }
-    useEffect(()=>{
+    const useRestaurants = ()=>useEffect(()=>{
          async function getRes(){
             const completeSwiggyDetails = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.578719393461192&lng=73.68416821775911&page_type=DESKTOP_WEB_LISTING')
             const restaurantJson = await completeSwiggyDetails.json()
@@ -24,6 +24,7 @@ export const MainPageComponent = ()=>{
             }
         getRes();
     },[])
+    useRestaurants();
     
     
     if(restaurants.length === 0){
