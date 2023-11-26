@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import userContext from "./utils/UserContext";
+import UserContext from "./utils/UserContext";
 
 const ResComponent = (prop) => { 
-    const {loggedInUser}= useContext(userContext)
+    const {loggedInUser}= useContext(UserContext)
     const {res} = prop;
     
 

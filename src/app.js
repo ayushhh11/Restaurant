@@ -8,7 +8,7 @@ import Contact from './Components/Contact'
 import Cart from './Components/Cart'
 import Restaurants from './Components/Restaurants'
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
-import userContext  from './Components/utils/UserContext'
+import UserContext  from './Components/utils/UserContext'
 import Head from './Head'
 import Shimmer from './Components/Shimmer'
 import { Provider } from 'react-redux'
@@ -24,18 +24,21 @@ const Socialupdate = Social(Contact)
 const App = ()=>{
     const [naam, setNaam] = useState()
     // Hooks can only be called inside the component
-    useEffect(()=>setNaam('Gray Matter')
-    ,[])
+    //  useEffect(()=>setNaam('Ayush'))
+    useEffect(()=>
+        setNaam('AYUSH')
+    ,[]
+    )
     
     return (
         <Provider store={appStore}>
-        <userContext.Provider value = {{loggedInUser: naam, setNaam}}>
+        <UserContext.Provider value = {{loggedInUser: naam}}>
     <div>
     <Head/>
     <Outlet/>
     
     </div> 
-    </userContext.Provider>
+    </UserContext.Provider>
     </Provider>
 )
       }
